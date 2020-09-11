@@ -1,0 +1,15 @@
+<?php
+// database/migrations/2020_09_06_170521_create_tasks_table.php
+...
+    public function up()
+    {
+        Schema::create('tasks', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('subject');
+            $table->text('description')->nullable();
+            $table->date('due_date')->nullable();
+            $table->boolean('completed')->nullable();
+            $table->timestamps();
+        });
+    }
+...
