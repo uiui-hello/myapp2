@@ -33,6 +33,14 @@
     <p>
       {{ $task->due_date }}
     </p>
+    <label>Prioritye</label>
+    <p>
+    @if(($task->priority) == 0) -
+            @elseif(($task->priority) == 1) 👻
+            @elseif(($task->priority) == 2) 👻👻
+            @elseif(($task->priority) == 3) 👻👻👻
+    @endif
+    </p>
     <label>Completed</label>
     <p>
       <input type="checkbox" disabled @if( $task->completed ) checked @endif/>

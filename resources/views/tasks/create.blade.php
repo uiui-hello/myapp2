@@ -32,6 +32,15 @@
           </div>
         </div>
       </div>
+      <div class="form-group">
+        <label for="priority-field">Priority</label>
+        <select name="priority" id="priority-field">
+        <option value="0" selected>-</option>
+        <option value="1">👻</option>
+        <option value="2">👻👻</option>
+        <option value="3">👻👻👻</option>
+        </select>
+      </div>
 
       <div class="well well-sm">
         <button type="submit" class="btn btn-primary">Create</button>

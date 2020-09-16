@@ -20,6 +20,7 @@
           <th>Subject</th>
           <th>Description</th>
           <th>Due Date</th>
+          <th>Priority</th>
           <th>Completed</th>
           <th class="text-right">OPTIONS</th>
         </tr>
@@ -33,6 +34,13 @@
           <td>{{$task->subject}}</td>
           <td>{{$task->description}}</td>
           <td>{{$task->due_date}}</td>
+          <td>
+          @if(($task->priority) == 0) -
+            @elseif(($task->priority) == 1) 👻
+            @elseif(($task->priority) == 2) 👻👻
+            @elseif(($task->priority) == 3) 👻👻👻
+          @endif
+          </td>
           <td><input type="checkbox" disabled @if( $task->completed ) checked @endif/></td>
 
           <td class="text-right">
