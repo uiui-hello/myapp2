@@ -12,4 +12,9 @@ class Task extends Model
 
     use Sortable;
     public $sortable = ['id', 'due_date', 'priority', 'completed'];
+
+    public function user()
+	{
+		return $this->belongsTo('App\User');
+	}
 }

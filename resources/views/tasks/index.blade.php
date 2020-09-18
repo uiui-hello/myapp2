@@ -20,6 +20,7 @@
           <th>Subject</th>
           <th>Description</th>
           <th>@sortablelink('due_date', 'Due Date')</th>
+          <th>@sortablelink('user_id', 'Creator')</th>
           <th>@sortablelink('priority', 'Priority')</th>
           <th>@sortablelink('conpleted', 'Completed')</th>
           <th class="text-right">OPTIONS</th>
@@ -34,6 +35,7 @@
           <td>{{$task->subject}}</td>
           <td>{{$task->description}}</td>
           <td>{{$task->due_date}}</td>
+          <td>{{$task->user->name}}</td>
           <td>
           @if(($task->priority) == 0) -
             @elseif(($task->priority) == 1) 👻
