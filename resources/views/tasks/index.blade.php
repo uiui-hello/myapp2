@@ -16,12 +16,12 @@
     <table class="table table-sm table-striped">
       <thead>
         <tr>
-          <th class="text-center">#</th>
+          <th class="text-center">@sortablelink('id', 'No.')</th>
           <th>Subject</th>
           <th>Description</th>
-          <th>Due Date</th>
-          <th>Priority</th>
-          <th>Completed</th>
+          <th>@sortablelink('due_date', 'Due Date')</th>
+          <th>@sortablelink('priority', 'Priority')</th>
+          <th>@sortablelink('conpleted', 'Completed')</th>
           <th class="text-right">OPTIONS</th>
         </tr>
       </thead>
