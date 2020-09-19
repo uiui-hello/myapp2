@@ -30,3 +30,11 @@ Route::post('/user/edit', 'UserController@update');
 // パスワード変更画面へアクセス
 Route::get('changepassword', 'HomeController@showChangePasswordForm');
 Route::post('changepassword', 'HomeController@changePassword')->name('changepassword');
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+// メールアドレス確認メールを送信
+Route::post('/email', 'ChangeEmailController@sendChangeEmailLink');
+
+// 新規メールアドレスに更新
+Route::get("reset/{token}", "ChangeEmailController@reset");
