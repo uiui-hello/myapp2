@@ -11,7 +11,7 @@ class Task extends Model
     protected $fillable = ['subject', 'due_date', 'completed', 'description', 'priority'];
 
     use Sortable;
-    public $sortable = ['id', 'due_date', 'priority', 'completed'];
+    public $sortable = ['id', 'due_date', 'user_id', 'priority', 'completed'];
 
     public function user()
 	{

@@ -21,3 +21,8 @@ Auth::routes(['verify' => true]);
 // ログインユーザーのみtasksへアクセス可能
 Route::resource('tasks', 'TaskController')
 ->middleware('verified');
+
+ 
+   Route::get('/user', 'UserController@index')->name('user');
+   Route::get('/user/edit', 'UserController@edit');
+   Route::post('/user/edit', 'UserController@update');

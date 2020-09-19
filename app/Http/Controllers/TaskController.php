@@ -38,13 +38,13 @@ class TaskController extends Controller
     public function store(Request $request)
     {
         $inputs = $request->all();
-$task = new Task();
-$task->subject = $inputs["subject"];
-$task->description = $inputs["description"];
-$task->due_date = $inputs["due_date"];
-$task->priority = $inputs["priority"];
-$task->user_id = Auth::id();
-$task->save();
+        $task = new Task();
+        $task->subject = $inputs["subject"];
+        $task->description = $inputs["description"];
+        $task->due_date = $inputs["due_date"];
+        $task->priority = $inputs["priority"];
+        $task->user_id = Auth::id();
+        $task->save();
 
         return redirect()->route('tasks.index')->with('message', 'Task created successfully.');
     }

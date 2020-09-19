@@ -29,12 +29,16 @@
       aria-haspopup="true" aria-expanded="false">
       {{Auth::user()->name}}
     </button>
-    <div class="dropdown-menu" id="navbarSupportedContent">
-        <a class="dropdown-item" href="{{route('logout') }}" onclick="event.preventDefault();
-    document.getElementById ('logout-form').submit();">ログアウト</a>
-        <form id='logout-form' action="{{ route('logout')}}" method="POST" style="display: none;">
-    @csrf
-       </form>
+    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="{{ route('user') }}">ユーザー</a>
+        <a class="dropdown-item" href="{{ route('logout') }}"
+            onclick="event.preventDefault();
+                          document.getElementById('logout-form').submit();">
+            {{ __('Logout') }}
+        </a>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+             @csrf
+        </form>
     </div>
   </nav>
 

@@ -39,9 +39,9 @@
         <label for="priority-field">Priority</label>
         <select name="priority" id="priority-field">
         <option value="0" selected>-</option>
-        <option value="1">👻</option>
-        <option value="2">👻👻</option>
-        <option value="3">👻👻👻</option>
+        <option value="1" @if(old('priority', $task->priority) == 1)selected @endif>👻</option>
+        <option value="2" @if(old('priority', $task->priority) == 2)selected @endif>👻👻</option>
+        <option value="3" @if(old('priority', $task->priority) == 3)selected @endif>👻👻👻</option>
         </select>
       </div>
       <div class="form-group form-check">
