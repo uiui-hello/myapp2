@@ -23,6 +23,7 @@
               </div>
             </div>
               <a href="{{ action('UserController@edit') }}"><button class="user-btn">ユーザー登録内容の編集</button></a>
+              <a href="{{ action('HomeController@showChangePasswordForm') }}"><button class="user-btn">パスワードを変更</button></a>
         </div>
       </div>
     </div>

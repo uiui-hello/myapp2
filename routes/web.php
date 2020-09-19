@@ -22,7 +22,11 @@ Auth::routes(['verify' => true]);
 Route::resource('tasks', 'TaskController')
 ->middleware('verified');
 
- 
-   Route::get('/user', 'UserController@index')->name('user');
-   Route::get('/user/edit', 'UserController@edit');
-   Route::post('/user/edit', 'UserController@update');
+// ユーザー情報変更画面へアクセス
+Route::get('/user', 'UserController@index')->name('user');
+Route::get('/user/edit', 'UserController@edit');
+Route::post('/user/edit', 'UserController@update');
+
+// パスワード変更画面へアクセス
+Route::get('changepassword', 'HomeController@showChangePasswordForm');
+Route::post('changepassword', 'HomeController@changePassword')->name('changepassword');

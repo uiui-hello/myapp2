@@ -34,7 +34,13 @@
 
           <td>{{$task->subject}}</td>
           <td>{{$task->description}}</td>
-          <td>{{$task->due_date}}</td>
+          <td>
+            @if( ($task->due_date) < date('Y-m-d') )
+            <p class="text-danger">{{$task->due_date}}</p>
+            @else
+            {{$task->due_date}}
+            @endif
+          </td>
           <td>{{$task->user->name}}</td>
           <td>
           @if(($task->priority) == 0) -
